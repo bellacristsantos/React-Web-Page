@@ -1,34 +1,32 @@
 import React from 'react';
-import styles from '/styles/header.module.css';
+import * as S from '../styles/Header.styles';
 
 const Header = () => (
-  <header>
-    <div className="header-container">
-      <div className="header-content">
-        <div className="header-logo">
-          <img src="../assets/logo.svg" alt="logo" />
-        </div>
-        <div className="header-text">
-          <h1>Alex Smith</h1>
-        </div>
+  <S.HeaderContainer>
+    <S.HeaderContent>
+      <S.HeaderLogo>
+        <img src="../assets/logo.svg" alt="logo" />
+      </S.HeaderLogo>
+      <div className="header-text">
+        <S.HeaderTitle>Alex Smith</S.HeaderTitle>
       </div>
-      <nav>
-        <div className="header-nav">
-          <ul>
-            <a className="nav-title" href="./home.html">
-              Home
-            </a>
-            <a className="nav-title" href="./work.html">
-              Work
-            </a>
-            <a className="nav-title" href="./contact.html">
-              Contact
-            </a>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
+    </S.HeaderContent>
+    <S.Nav>
+      <div className="header-nav">
+        <ul>
+          <a className="nav-title" href="./home.html">
+            Home
+          </a>
+          <a className="nav-title" href="./work.html">
+            Work
+          </a>
+          <a className="nav-title" href="./contact.html">
+            Contact
+          </a>
+        </ul>
+      </div>
+    </S.Nav>
+  </S.HeaderContainer>
 );
 
 export default Header;
